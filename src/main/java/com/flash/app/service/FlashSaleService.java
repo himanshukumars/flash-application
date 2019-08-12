@@ -12,7 +12,7 @@ import com.flash.app.model.*;
 import com.flash.app.util.ApplicationConstants;
 
 @Service
-public class FlashSaleService {
+public class FlashSaleService implements IFlashSaleService{
 	
 	@Autowired
 	ProductRepository productRepository;
