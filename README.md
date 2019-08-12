@@ -27,8 +27,6 @@ As per the problem statement, we have implemented a FlashSale framework. The sys
 - Only Registered user to eCommerce site will be able to register and that's why another registration table.
 - Payment is abstracted out and considered successful after checkout() API is invoked.
 
-
-
 #### Flow
 
 - Marketplace registers a flashsale with an existing product and opens the registration.
@@ -49,6 +47,12 @@ As per the problem statement, we have implemented a FlashSale framework. The sys
       4. Purchase limit per buyer per flash sale is 1 but the quantity can change.
       5. User is buying in the flash sale period. 
       
+#### Flow Design
+
+Here is the ER Diagram for the above implementaion:
+
+![ER Daiagram](https://github.com/himanshukumars/flash-application/blob/master/FlashSale.png)
+
 ## Future Scope
 
 1. Login Implementation
