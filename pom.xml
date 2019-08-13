@@ -23,6 +23,17 @@
 		<junit.jupiter.verion>5.5.0</junit.jupiter.verion>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>spring-boot-throttling-repo</id>
+			<url>https://raw.github.com/weddini/spring-boot-throttling/mvn-repo/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -46,7 +57,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 
 	<dependencies>
 		<dependency>
@@ -124,6 +134,12 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.weddini.throttling</groupId>
+			<artifactId>spring-boot-throttling-starter</artifactId>
+			<version>0.0.9</version>
 		</dependency>
 	</dependencies>
 
