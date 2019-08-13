@@ -3,6 +3,7 @@ package com.flash.app.service;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,8 @@ import com.flash.app.dao.*;
 import com.flash.app.entity.*;
 import com.flash.app.model.*;
 import com.flash.app.util.ApplicationConstants;
+import com.weddini.throttling.Throttling;
+import com.weddini.throttling.ThrottlingType;
 
 @Service
 public class FlashSaleService implements IFlashSaleService{
@@ -79,7 +82,7 @@ public class FlashSaleService implements IFlashSaleService{
 		return flashSaleEventRepository.findById(flashSaleId).isPresent();
 	}
 	
-	
+	@Throttling(type = ThrottlingType.RemoteAddr, limit = 100, timeUnit = TimeUnit.MINUTES)
 	public String placeOrder(PurchaseOrder purchaseOrder) {
 		
 		String userId = purchaseOrder.getUsername();
