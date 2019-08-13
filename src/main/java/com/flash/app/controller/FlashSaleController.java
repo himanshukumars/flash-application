@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.flash.app.entity.Product;
 import com.flash.app.entity.Users;
 import com.flash.app.model.PurchaseOrder;
-import com.flash.app.service.FlashSaleService;
+import com.flash.app.service.IFlashSaleService;
 import com.flash.app.util.*;
 
 @RestController
