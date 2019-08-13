@@ -20,7 +20,7 @@ import com.flash.app.util.*;
 public class FlashSaleController {
 	
 	@Autowired
-	private FlashSaleService flashSaleService;
+	private IFlashSaleService flashSaleService;
 	
 	@PostMapping("/register/flashSale/{flashSaleId}")
 	public ResponseEntity<String> registerUserForSale(@RequestBody Users user, @PathVariable("flashSaleId") Integer flashSaleId){
