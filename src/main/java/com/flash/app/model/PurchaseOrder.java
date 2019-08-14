@@ -7,6 +7,13 @@ public class PurchaseOrder {
 	private Integer quantity;
 	private Integer flashSaleId;
 	
+	public PurchaseOrder(Integer productId, String username, Integer quantity, Integer flashSaleId) {
+		this.productId = productId;
+		this.username = username;
+		this.quantity = quantity;
+		this.flashSaleId = flashSaleId;
+	}	
+	
 	public Integer getProductId() {
 		return productId;
 	}
